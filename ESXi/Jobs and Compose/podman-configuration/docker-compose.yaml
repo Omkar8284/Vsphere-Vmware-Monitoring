@@ -4,7 +4,7 @@ services:
     image: prom/prometheus:v2.17.0
     volumes:
     - type: volume
-      source: prometheus_data
+      source: pro_vol
       target: /prometheus
     - /opt/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
@@ -15,7 +15,7 @@ services:
     image: grafana/grafana:10.0.0
     volumes:
     - type: volume
-      source: grafana_configuration
+      source: grafana_vol
       target: /etc/grafana
     - type: volume
       source: grafana_data
