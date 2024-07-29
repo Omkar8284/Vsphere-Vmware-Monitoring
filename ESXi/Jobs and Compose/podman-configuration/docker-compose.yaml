@@ -18,7 +18,7 @@ services:
       source: grafana_vol
       target: /etc/grafana
     - type: volume
-      source: grafana_data
+      source: grafana_vol
       target: /var/lib/grafana
     ports:
     - 3000:3000
